@@ -1,4 +1,4 @@
-# Spotify Shuffler
+# Shuffler for Spotify
 
 Spotify's shuffle is bad. This project uses the Spotify API to rearrange a playlist in a random order. Then, you can just play that playlist in order (without spotify's shuffle on), to have a shuffled playlist!
 
