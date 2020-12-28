@@ -13,6 +13,8 @@ Currently, only the python prototype is done. But to use it:
 1. Run the script (```python3 shuffler-prototype.py``` from a terminal in the same directory as the shuffler-prototype.py file)
 2. Follow the prompts!
 
+Note if you use the script several times in a row, you can just re-paste the same authenticated URL each time (the login lasts for an hour), rather than re-opening the link and pasting in a new one each time.
+
 ### Development plan
 1. Make a prototype in python because I hate javascript and would rather work out Spotify's API in python. (💙🐍).
 2. Turn that prototype into a proof of concept with Javascript
