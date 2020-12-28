@@ -2,6 +2,17 @@
 
 Spotify's shuffle is bad. This project uses the Spotify API to rearrange a playlist in a random order. Then, you can just play that playlist in order (without spotify's shuffle on), to have a shuffled playlist!
 
+### Use
+Currently, only the python prototype is done. But to use it:
+*Install*:
+1. Make sure you have python3 installed
+2. Install the requests library - ```pip install requests```
+3. Download 'shuffler-prototype.py' somewhere convenient to run
+
+*Use*:
+1. Run the script (```python3 shuffler-prototype.py``` from a terminal in the same directory as the shuffler-prototype.py file)
+2. Follow the prompts!
+
 ### Development plan
 1. Make a prototype in python because I hate javascript and would rather work out Spotify's API in python. (💙🐍).
 2. Turn that prototype into a proof of concept with Javascript
