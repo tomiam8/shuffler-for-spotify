@@ -18,6 +18,14 @@ Note if you use the script several times in a row, you can just re-paste the sam
 ### Development plan
 1. Make a prototype in python because I hate javascript and would rather work out Spotify's API in python. (💙🐍).
 2. Turn that prototype into a proof of concept with Javascript
+    i. Load playlist list off of hardcoded/manually pasted into textbook key (as key expires after 60min, is fine to hardcode??? But still keys in git, kinda scary)
+    ii. Make download all songs for a given playlist work
+    iii. Depaginator
+    iii. Make new shuffled playlists work
+    iv. Make auth process work
+    v. An hour of basic prettiness (?)
+    vi. Make auto-login checkbox
+    vii. Make logout (turn off auto-login)
 3. Make it pretty, work as a PWA (?), maybe finally learn React
 4. Do the smart-playlist extension too
 
