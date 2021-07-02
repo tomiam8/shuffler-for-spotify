@@ -5,20 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">-->
 <!-- Own CSS -->
-<link rel="stylesheet" href="/site/css/play.css">
+<!--<link rel="stylesheet" href="/site/css/play.css">-->
+<link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
 
 <title>Shufller for Spotify</title>
 </head>
-<body>
+<body class="bg-near-white near-black">
+<div class="pa3 center measure-wide lh-copy calisto">
+    <h1 class="f-subheadline-ns f1 helvetica lh-solid mt0 mb3">Shuffler for Spotify</h1>
 
 Paste spotify key: <input id="spotifyKey" type="text" />
-<input id="getPlaylistButton" type="button" value="Get Playlists" onclick="getPlaylists();" />
+<input class="helvetica bg-animate near-white hover-bg-gold ba pointer br3 pa2 mt3 bg-orange" id="getPlaylistButton" type="button" value="Get Playlists" onclick="getPlaylists();" />
 
 <ul id="playlistList">
 </ul>
 
+</div>
 <script src="shuffler.js"></script>
 </body>
 </html>
