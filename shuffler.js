@@ -12,16 +12,17 @@ function listPlaylists(playlists) {
         but = document.createElement('input');
         but.type = 'button';
         but.value = item.name;
-        but.setAttribute("onclick", "shuffle(\"" + item.id + "\");") //probably (definitely) a better way then hardcoding the IDs into the function call lol
+        but.setAttribute("onclick", "shuffleSongs(\"" + item.id + "\");") //probably (definitely) a better way then hardcoding the IDs into the function call lol
         li.appendChild(but);
         list.appendChild(li);
     });
 }
 
-function shuffle(playlistID) {
+function shuffleSongs(playlistID) {
     depaginator('https://api.spotify.com/v1/playlists/' + playlistID + '/tracks?market=from_token&fields=items(track(uri))%2Cnext')
     .then(data => {
-        console.log(data);
+        fisherYates(data);
+        //makePlaylist(data); //Todo
     });
 }
 
@@ -43,3 +44,15 @@ function getSpotifyToken() {
 function getSpotifyHeaders() {
     return {headers: {"Authorization": "Bearer " + getSpotifyToken()}}
 }
+
+function fisherYates(list) {
+    for (let i = 0; i < list.length-1; i++) {
+        j = i + Math.floor((list.length - i)*Math.random());
+        console.log(i, j);
+        temp = list[i];
+        list[i] = list[j];
+        list[j] = temp;
+    }
+    return list; //Shuffles in place so redundant...
+}
+
