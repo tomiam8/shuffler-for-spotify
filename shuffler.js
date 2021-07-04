@@ -73,7 +73,11 @@ async function depaginator(URL) {
 
 
 function getSpotifyToken() {
-    token = (new URLSearchParams(document.location)).get('access_token');
+    searchString = (new URL(document.location)).hash;
+    if (searchString.startsWith('#')) {
+        searchString = searchString.slice(1);
+    }
+    token = (new URLSearchParams(searchString)).get('access_token');
     console.log(token);
     return token;
     //return document.getElementById('spotifyKey').value;
