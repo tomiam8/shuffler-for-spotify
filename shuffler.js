@@ -73,7 +73,10 @@ async function depaginator(URL) {
 
 
 function getSpotifyToken() {
-    return document.getElementById('spotifyKey').value;
+    token = (new URLSearchParams(document.location)).get('access_token');
+    console.log(token);
+    return token;
+    //return document.getElementById('spotifyKey').value;
 }
 
 
@@ -108,3 +111,10 @@ function generateNewPlaylistName(name, playlists) {
     }
     return name;
 }
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    if (getSpotifyToken() !== null) {
+        document.getElementById('spotifyLoginLink').remove();
+        getPlaylists();
+    }
+});
