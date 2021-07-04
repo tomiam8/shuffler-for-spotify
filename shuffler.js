@@ -78,7 +78,6 @@ function getSpotifyToken() {
         searchString = searchString.slice(1);
     }
     token = (new URLSearchParams(searchString)).get('access_token');
-    console.log(token);
     return token;
     //return document.getElementById('spotifyKey').value;
 }
