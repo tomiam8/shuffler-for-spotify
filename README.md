@@ -26,6 +26,9 @@ Note if you use the script several times in a row, you can just re-paste the sam
     v. An hour of basic prettiness (?)
     vi. Make auto-login checkbox
     vii. Make logout (turn off auto-login)
+    viii. Add screen for when adding songs
+    ix. Add error-messages if fails
+    x. Check that authentication token is current, re-authenticate if isn't
 3. Make it pretty, work as a PWA (?), maybe finally learn React
 4. Do the smart-playlist extension too
 

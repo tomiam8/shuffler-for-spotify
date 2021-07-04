@@ -32,7 +32,7 @@ function shuffleSongs(button) {
     });
 }
 
-function addSongs(id, songs) {
+async function addSongs(id, songs) {
     start_index = 0;
     url = "https://api.spotify.com/v1/playlists/" + id + "/tracks";
     contents = getSpotifyHeaders();
@@ -44,7 +44,7 @@ function addSongs(id, songs) {
 
         songSelections = songs.slice(start_index, end_index).map(song => song.track.uri);
         contents.body = JSON.stringify({'uris': songSelections});
-        fetch(url, contents);
+        await fetch(url, contents); //Pause, sending the requests one by one, because if we send them all at once Spotify breaks and sends back a 500 Error. I tried reporting it to them but their reporting forum wouldn't let me post. :(.
 
         start_index = end_index;
     }
