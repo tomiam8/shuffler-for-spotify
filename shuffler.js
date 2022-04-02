@@ -21,6 +21,7 @@ function listPlaylists(playlists) {
 }
 
 function shuffleSongs(button) {
+    showShufflingMessage();
     playlist = JSON.parse(button.dataset.playlist);
     depaginator('https://api.spotify.com/v1/playlists/' + playlist.id + '/tracks?market=from_token&fields=items(track(uri))%2Cnext')
     .then(songs => {
@@ -48,6 +49,7 @@ async function addSongs(id, songs) {
 
         start_index = end_index;
     }
+    hideShufflingMessage();
 }
 
 
@@ -114,6 +116,15 @@ function generateNewPlaylistName(name, playlists) {
     }
     return name;
 }
+
+function showShufflingMessage() {
+    document.getElementById("shufflingMessage").setAttribute('style', 'visibility:visible;height:auto;');
+}
+
+function hideShufflingMessage() {
+    document.getElementById("shufflingMessage").setAttribute('style', 'visibility:hidden;height:0px;');
+}
+
 
 window.addEventListener('DOMContentLoaded', (event) => {
     if (getSpotifyToken() !== null) {
