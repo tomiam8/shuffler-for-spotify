@@ -1,5 +1,8 @@
 # Shuffler for Spotify
 
+🎉🎉🎉**Try it out:** [https://tomiam8.github.io/shuffler-for-spotify/index.html](https://tomiam8.github.io/shuffler-for-spotify/index.html)🎉🎉🎉
+
+
 Spotify's shuffle is bad. This project uses the Spotify API to rearrange a playlist in a random order. Then, you can just play that playlist in order (without spotify's shuffle on), to have a shuffled playlist!
 
 ### Use
